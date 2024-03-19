@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body{
             background-color: white;
         }
@@ -14,21 +19,64 @@
             width: 100%;
         }
         nav a{
-            background-color: yellow;
             padding: 5px 10px;
             text-decoration: none;
         }
         nav a:hover{
             background-color: teal;
         }
+        .mobile-menu{
+            display: flex;
+            flex-direction: row;
+            font-size: .8rem;
+            background-color: yellow;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+        }
+        .desktop-menu{
+            display: none;
+        }
+        .hero{
+            background-image: url(https://tindallranson.com/wp-content/uploads/2014/04/plumbing.jpg);
+            height: 100lvh;
+            background-repeat: no-repeat;
+        }
+        .hero-text{
+            background-color: rgba(240, 248, 255, 0.637);
+            width: 30rem;
+            padding: 1.5rem 3rem;
+        }
+        @media(min-width:768px){
+            .mobile-menu{
+                display: none;
+            }
+            .desktop-menu{
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                height: 70px;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
-    <nav>
+    <header>
+    <nav class="desktop-menu">
         <a href="">About Us</a>
         <a href="">Plumbing Services</a>
         <a href="">Areas We Serve</a>
         <a href="">Contact Us</a>
     </nav>
+    <nav class="mobile-menu">
+        <a href="">About Us</a>
+        <a href="">Plumbing Services</a>
+        <a href="">Contact Us</a>
+    </nav>
+    </header>
+    <section class="hero">
+        <h2 class="hero-text">“Plumbing is the silent hero that ensures our modern comforts, working tirelessly behind the scenes.”</h2>
+    </section>
 </body>
 </html>
